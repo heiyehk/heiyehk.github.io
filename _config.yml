@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
+title: 黑叶HeiYe
+subtitle: 
+description: 黑叶HeiYe博客，一个爱于分享和转载前端技术、前端资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。使用的是Hexo框架搭建在Github中。
+keywords: javascript,vue,nodejs,HeiYe,heiyehk,html5,css3,前端,前端工程师
+author: HeiYe
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://heiyehk.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
