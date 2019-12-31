@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/desktop/precache-manifest.bf3512c8b9c09becfcf9bfd9104aa0c5.js"
+  "/desktop/precache-manifest.4579ec937e389a6c2ae5d887d16b894a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "hyplatform"});
