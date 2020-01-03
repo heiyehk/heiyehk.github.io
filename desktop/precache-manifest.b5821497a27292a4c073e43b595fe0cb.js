@@ -1,50 +1,46 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c87d02c47d5d5b95d1824c4e8de4e116",
-    "url": "/desktop/css/animate.css"
+    "revision": "b712f9a700e85af3c50a",
+    "url": "/desktop/css/chunk-16921931.css"
   },
   {
-    "revision": "9965d57e72bf3f972013",
-    "url": "/desktop/css/chunk-0468f937.css"
+    "revision": "a8bb5b2d4235a1432653",
+    "url": "/desktop/css/chunk-1fb7fe62.css"
   },
   {
-    "revision": "74e7ba775098a25fa96f",
-    "url": "/desktop/css/chunk-17ba9303.css"
+    "revision": "4b91cad2ffdf405c06b0",
+    "url": "/desktop/css/chunk-27f11ed6.css"
   },
   {
-    "revision": "59b0eb41923e6e2fa21f",
-    "url": "/desktop/css/chunk-4dc58d5c.css"
+    "revision": "ab812d22fbf2435f2e8e",
+    "url": "/desktop/css/chunk-31080e28.css"
   },
   {
-    "revision": "dcc5432d259f3ac35304",
-    "url": "/desktop/css/chunk-4ddc939c.css"
+    "revision": "ff25302714e93aae0900",
+    "url": "/desktop/css/chunk-448659e6.css"
   },
   {
-    "revision": "56f188604444dd415f82",
-    "url": "/desktop/css/chunk-5cb9e8b7.css"
+    "revision": "5f57a6b7db1660932fe8",
+    "url": "/desktop/css/chunk-47a4af9e.css"
   },
   {
-    "revision": "0a6d776629c807e3325b",
-    "url": "/desktop/css/chunk-6677edb3.css"
+    "revision": "3146b20a15905e665f37",
+    "url": "/desktop/css/chunk-7383f832.css"
   },
   {
-    "revision": "fc3f081f349f555990f1",
-    "url": "/desktop/css/chunk-68a9683d.css"
+    "revision": "055a6ec0d42193ab4c5e",
+    "url": "/desktop/css/chunk-78f85fa6.css"
   },
   {
-    "revision": "f384a41b59d9a149438a",
-    "url": "/desktop/css/chunk-f28699aa.css"
+    "revision": "f04a9a8fcd1ec354d6fd",
+    "url": "/desktop/css/chunk-7ffa6cf4.css"
   },
   {
-    "revision": "a2c7881134288a32a591",
-    "url": "/desktop/css/chunk-fdaf7642.css"
-  },
-  {
-    "revision": "1c73b8bedd0e9b257992",
+    "revision": "0d261c3621e2424276c3",
     "url": "/desktop/css/chunk-vendors.css"
   },
   {
-    "revision": "7688dffb06a7ef8ab40e",
+    "revision": "0ae5313b1a6f3b692243",
     "url": "/desktop/css/index.css"
   },
   {
@@ -96,16 +92,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/desktop/img/search-icon/sg.png"
   },
   {
-    "revision": "fb3bdda91d3d1f2b6dc7054949cfa062",
+    "revision": "37302b580b5769874ded4528417e7e0e",
     "url": "/desktop/index.html"
   },
   {
-    "revision": "9965d57e72bf3f972013",
-    "url": "/desktop/js/chunk-0468f937.js"
+    "revision": "b712f9a700e85af3c50a",
+    "url": "/desktop/js/chunk-16921931.js"
   },
   {
-    "revision": "74e7ba775098a25fa96f",
-    "url": "/desktop/js/chunk-17ba9303.js"
+    "revision": "a8bb5b2d4235a1432653",
+    "url": "/desktop/js/chunk-1fb7fe62.js"
+  },
+  {
+    "revision": "4b91cad2ffdf405c06b0",
+    "url": "/desktop/js/chunk-27f11ed6.js"
   },
   {
     "revision": "0c5c550b1292ca3f82d3",
@@ -116,47 +116,43 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/desktop/js/chunk-2d224d03.js"
   },
   {
-    "revision": "59b0eb41923e6e2fa21f",
-    "url": "/desktop/js/chunk-4dc58d5c.js"
+    "revision": "ab812d22fbf2435f2e8e",
+    "url": "/desktop/js/chunk-31080e28.js"
   },
   {
-    "revision": "dcc5432d259f3ac35304",
-    "url": "/desktop/js/chunk-4ddc939c.js"
+    "revision": "ff25302714e93aae0900",
+    "url": "/desktop/js/chunk-448659e6.js"
+  },
+  {
+    "revision": "5f57a6b7db1660932fe8",
+    "url": "/desktop/js/chunk-47a4af9e.js"
   },
   {
     "revision": "aef4831e93076c02fd0d",
     "url": "/desktop/js/chunk-558f0f33.js"
   },
   {
-    "revision": "56f188604444dd415f82",
-    "url": "/desktop/js/chunk-5cb9e8b7.js"
+    "revision": "3146b20a15905e665f37",
+    "url": "/desktop/js/chunk-7383f832.js"
   },
   {
-    "revision": "0a6d776629c807e3325b",
-    "url": "/desktop/js/chunk-6677edb3.js"
+    "revision": "055a6ec0d42193ab4c5e",
+    "url": "/desktop/js/chunk-78f85fa6.js"
   },
   {
-    "revision": "fc3f081f349f555990f1",
-    "url": "/desktop/js/chunk-68a9683d.js"
+    "revision": "f04a9a8fcd1ec354d6fd",
+    "url": "/desktop/js/chunk-7ffa6cf4.js"
   },
   {
-    "revision": "c463e8a8d589d5f8adc7",
+    "revision": "053fdab3bb87e044e689",
     "url": "/desktop/js/chunk-c92045f6.js"
   },
   {
-    "revision": "f384a41b59d9a149438a",
-    "url": "/desktop/js/chunk-f28699aa.js"
-  },
-  {
-    "revision": "a2c7881134288a32a591",
-    "url": "/desktop/js/chunk-fdaf7642.js"
-  },
-  {
-    "revision": "1c73b8bedd0e9b257992",
+    "revision": "0d261c3621e2424276c3",
     "url": "/desktop/js/chunk-vendors.js"
   },
   {
-    "revision": "7688dffb06a7ef8ab40e",
+    "revision": "0ae5313b1a6f3b692243",
     "url": "/desktop/js/index.js"
   },
   {
