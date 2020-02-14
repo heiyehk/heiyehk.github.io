@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>我爱你~酱酱</title>
 	<script src="https://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
 	<script type="text/javascript" src="./js/toucher.js"></script>
@@ -127,9 +127,8 @@
 			var spin90 = document.querySelector('.spin-90');
 			var spin270 = document.querySelector('.spin-270');
 			// layoutIndex.innerHTML = screen.orientation.angle;
-			if (typeingWordInterval) {
-				clearInterval(typeingWordInterval)
-			}
+			console.log(typeingWordInterval)
+			clearInterval(typeingWordInterval)
 			if (screen.orientation.angle === 0) {
 				spin90.style.left = '-100%';
 				spin270.style.right = '-100%';
