@@ -70,9 +70,20 @@
       window.app = homeFnjs.app;
     }
   </script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/less.js/3.11.1/less.min.js"></script>
   <script>
-    less.watch();
-  </script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+    
 </body>
 </html>
