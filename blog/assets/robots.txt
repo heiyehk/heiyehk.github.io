@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /blog/archives/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+Disallow: /categories/
+
+Sitemap: https://heiyehk.github.io/blog/sitemap.xml
+Sitemap: https://heiyehk.github.io/blog/baidusitemap.xml
