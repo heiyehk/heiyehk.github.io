@@ -17,7 +17,7 @@
 <meta property="og:description" content="摘要hexo是一款快速、简洁且高效的博客框架。中文文档https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;   12345npm install hexo-cli -ghexo init blogcd blognpm installhexo server">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-29T06:15:36.000Z">
-<meta property="article:modified_time" content="2020-04-30T09:27:55.875Z">
+<meta property="article:modified_time" content="2020-05-20T08:59:52.324Z">
 <meta property="article:author" content="HeiYehk">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -199,6 +199,10 @@
 
 <a id="more"></a>
 <p>网上有很多好看并且SEO优化的很好的主题，我选择了<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Yilia</a>这款主题作为博客的新主题😁。</p>
+<h3 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"我的博客"</span> == hexo new <span class="string">"我的博客"</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate <span class="comment">#生成</span></span><br><span class="line">hexo s == hexo server <span class="comment">#启动服务预览</span></span><br><span class="line">hexo d == hexo deploy <span class="comment">#部署</span></span><br><span class="line">hexo cl == hexo clean <span class="comment">#删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 清除所有缓存并运行</span></span><br><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="文章内容模板编辑"><a href="#文章内容模板编辑" class="headerlink" title="文章内容模板编辑"></a>文章内容模板编辑</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: 使用Hexo搭建个人博客</span><br><span class="line">layout: post</span><br><span class="line">date: 2014-03-03 19:07:43</span><br><span class="line">comments: <span class="literal">true</span></span><br><span class="line">categories: Blog <span class="comment">#归档和tag尽量把大分类放在前面</span></span><br><span class="line">tags: [Hexo]</span><br><span class="line">keywords: Hexo, Blog</span><br><span class="line">description: 生命在于折腾，又把博客折腾到Hexo了。给Hexo点赞。</span><br></pre></td></tr></table></figure>
+
 <h3 id="网站的SEO优化"><a href="#网站的SEO优化" class="headerlink" title="网站的SEO优化"></a>网站的SEO优化</h3><h4 id="添加站点"><a href="#添加站点" class="headerlink" title="添加站点"></a>添加站点</h4><p>进入<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度站长平台</a>，然后进入个人中心，添加你的网站，把验证内容下载下来放入<code>source/assets</code>这个文件夹中。<br>进入<a href="https://search.google.com/search-console/welcome" target="_blank" rel="noopener">google search console</a>，选择<code>网址前缀</code>，输入你的域名，然后下载验证文件，把验证内容下载下来放入<code>source/assets</code>这个文件夹中。<br>当然也可以使用其他的验证方式进行验证。</p>
 <h4 id="生成站点地图和rss"><a href="#生成站点地图和rss" class="headerlink" title="生成站点地图和rss"></a>生成站点地图和rss</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 谷歌sitemap</span></span><br><span class="line">npm install hexo-generator-sitemap</span><br><span class="line"><span class="comment"># 百度sitemap</span></span><br><span class="line">npm install hexo-generator-baidu-sitemap</span><br><span class="line"><span class="comment"># rss</span></span><br><span class="line">npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
 
@@ -340,7 +344,7 @@
         </span>
         <span class="tooltip-content">
           <div class="toc-article">
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网站的SEO优化"><span class="toc-number">2.</span> <span class="toc-text">网站的SEO优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加站点"><span class="toc-number">2.1.</span> <span class="toc-text">添加站点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成站点地图和rss"><span class="toc-number">2.2.</span> <span class="toc-text">生成站点地图和rss</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-robots-txt"><span class="toc-number">3.</span> <span class="toc-text">添加 robots.txt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提交sitemap"><span class="toc-number">4.</span> <span class="toc-text">提交sitemap</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用命令"><span class="toc-number">2.</span> <span class="toc-text">使用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章内容模板编辑"><span class="toc-number">3.</span> <span class="toc-text">文章内容模板编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网站的SEO优化"><span class="toc-number">4.</span> <span class="toc-text">网站的SEO优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加站点"><span class="toc-number">4.1.</span> <span class="toc-text">添加站点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生成站点地图和rss"><span class="toc-number">4.2.</span> <span class="toc-text">生成站点地图和rss</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-robots-txt"><span class="toc-number">5.</span> <span class="toc-text">添加 robots.txt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#提交sitemap"><span class="toc-number">6.</span> <span class="toc-text">提交sitemap</span></a></li></ol>
           </div>
         </span>
       </div>
@@ -457,15 +461,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              <a href="javascript:void(0)" class="js-tag color4">CDN</a>
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              <a href="javascript:void(0)" class="js-tag color3">前端</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">面试</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">js</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -489,15 +505,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+              <a href="javascript:void(0)" class="js-tag color5">能力提升</a>
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">js</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              <a href="javascript:void(0)" class="js-tag color3">闭包</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -505,7 +517,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">能力提升</a>
+              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -514,6 +526,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">缓存</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">原型</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">原型链</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -538,6 +558,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">Repaint</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">变量提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">V8</a>
             </li>
             
             <div class="clearfix"></div>
