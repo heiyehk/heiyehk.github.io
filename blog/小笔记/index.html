@@ -7,30 +7,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://heiyehk.github.io/blog">
-  <title>Category: SEO | HeiYe</title>
+  <title>小笔记 | HeiYe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="黑叶HeiYe博客，一个爱于分享和转载技术、资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HeiYe">
-<meta property="og:url" content="https://heiyehk.github.io/blog/categories/%E5%89%8D%E7%AB%AF/SEO/index.html">
+  <meta name="description" content="获取视频时长1234567891011getVideoDuration(file: File) &amp;#123;  return new Promise(resolve &#x3D;&gt; &amp;#123;    const fileurl &#x3D; URL.createObjectURL(file);    const audioElement: HTMLAudioElement &#x3D; new Audio(fileur">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小笔记">
+<meta property="og:url" content="https://heiyehk.github.io/blog/%E5%B0%8F%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="HeiYe">
-<meta property="og:description" content="黑叶HeiYe博客，一个爱于分享和转载技术、资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。">
+<meta property="og:description" content="获取视频时长1234567891011getVideoDuration(file: File) &amp;#123;  return new Promise(resolve &#x3D;&gt; &amp;#123;    const fileurl &#x3D; URL.createObjectURL(file);    const audioElement: HTMLAudioElement &#x3D; new Audio(fileur">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-29T08:40:44.000Z">
+<meta property="article:modified_time" content="2020-09-29T08:50:48.757Z">
 <meta property="article:author" content="HeiYehk">
 <meta property="article:tag" content="前端">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="html5">
 <meta property="article:tag" content="js">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="css3">
-<meta property="article:tag" content="vue">
-<meta property="article:tag" content="webpack">
-<meta property="article:tag" content="babel">
-<meta property="article:tag" content="react">
-<meta property="article:tag" content="nodejs">
-<meta property="article:tag" content="es5">
-<meta property="article:tag" content="es6">
-<meta property="article:tag" content="博客">
+<meta property="article:tag" content="变量提升">
+<meta property="article:tag" content="函数声明提升">
 <meta name="twitter:card" content="summary">
   
   <link rel="alternative" href="/atom.xml" title="HeiYe" type="application/atom+xml">
@@ -188,39 +180,46 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-
-
-
-
-
-<section class="archives-wrap">
-  <div class="archive-year-wrap">
-    <a href="/blog/archives/2020" class="archive-year">2020</a>
-  </div>
-  <div class="archives">
+            <article id="post-小笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <div class="article-meta">
-        <a href="/blog/SEO%E5%85%B3%E9%94%AE%E8%AF%8D/" class="archive-article-date">
-  <time datetime="2020-04-30T03:29:41.000Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-04-30</time>
-</a>
+      <header class=" article-header">
+  
 
-      </div>
-      
-
-<h1 itemprop="name">
-  <a class="archive-article-title" href="/blog/SEO%E5%85%B3%E9%94%AE%E8%AF%8D/">SEO关键词</a>
+<h1 class="article-title" itemprop="name">
+  小笔记
 </h1>
 
 
 
-      <div class="article-info info-on-right">
-        
+  
+  <a href="/blog/%E5%B0%8F%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  <time datetime="2020-09-29T08:40:44.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2020-09-29</time>
+</a>
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="获取视频时长"><a href="#获取视频时长" class="headerlink" title="获取视频时长"></a>获取视频时长</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">getVideoDuration(file: File) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> fileurl = URL.createObjectURL(file);</span><br><span class="line">    <span class="keyword">const</span> audioElement: HTMLAudioElement = <span class="keyword">new</span> Audio(fileurl);</span><br><span class="line">    <span class="keyword">let</span> eventListener: <span class="built_in">any</span>;</span><br><span class="line">    eventListener = audioElement.addEventListener(<span class="string">'loadedmetadata'</span>, <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      resolve(audioElement.duration);</span><br><span class="line">      audioElement.removeEventListener(<span class="string">'loadedmetadata'</span>, eventListener);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="VueRouter"><a href="#VueRouter" class="headerlink" title="VueRouter"></a>VueRouter</h3><h4 id="解决多次点击报错问题"><a href="#解决多次点击报错问题" class="headerlink" title="解决多次点击报错问题"></a>解决多次点击报错问题</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> originalPush = Router.prototype.push;</span><br><span class="line">Router.prototype.push = <span class="function"><span class="keyword">function</span> <span class="title">push</span>(<span class="params">location: <span class="built_in">any</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">originalPush.call(<span class="params"><span class="keyword">this</span>, location</span>) <span class="keyword">as</span> <span class="built_in">any</span></span>).<span class="params">catch</span>(<span class="params">(<span class="params">err: <span class="built_in">any</span></span>) =&gt; err</span>);</span></span><br><span class="line"><span class="function">&#125;;</span></span><br></pre></td></tr></table></figure>
+<h4 id="重置默认路由"><a href="#重置默认路由" class="headerlink" title="重置默认路由"></a>重置默认路由</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 思路直接替换掉默认原有的路由</span></span><br><span class="line"><span class="keyword">const</span> resetRouter = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  router.matcher = <span class="keyword">new</span> Router(&#123;</span><br><span class="line">    routes</span><br><span class="line">  &#125;).matcher;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="对象过滤空内容"><a href="#对象过滤空内容" class="headerlink" title="对象过滤空内容"></a>对象过滤空内容</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> FilterEmpty = (</span><br><span class="line">  data: AxiosData,</span><br><span class="line">  validation?: <span class="built_in">any</span>[] | <span class="literal">undefined</span></span><br><span class="line">) =&gt; AxiosData;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;Object&#125; data Object对象，如&#123; a: null, b: 1, c: '' &#125;</span></span><br><span class="line"><span class="comment"> * @param &#123;Array&#125; validation 传入需要过滤的数组，如[null, undefined, '', 0]</span></span><br><span class="line"><span class="comment"> * @returns &#123;Object&#125; 返回一个新的Object对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> filterEmpty: FilterEmpty = (</span><br><span class="line">  data: AxiosData,</span><br><span class="line">  validation?: <span class="built_in">any</span>[]</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> data !== <span class="string">'object'</span>) <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">  <span class="keyword">const</span> newObj: AxiosData = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> key of <span class="built_in">Object</span>.keys(data)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!validation) &#123;</span><br><span class="line">      <span class="keyword">if</span> (data[key] !== <span class="string">''</span> &amp;&amp; data[key] !== <span class="literal">undefined</span> &amp;&amp; data[key] !== <span class="literal">null</span>) &#123;</span><br><span class="line">        newObj[key] = data[key];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (!validation.includes(data[key])) &#123;</span><br><span class="line">        newObj[key] = data[key];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newObj;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="base64转Blob对象"><a href="#base64转Blob对象" class="headerlink" title="base64转Blob对象"></a>base64转Blob对象</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> convertBase64UrlToBlob = (</span><br><span class="line">  base64: <span class="built_in">string</span> | <span class="built_in">ArrayBuffer</span> | <span class="literal">null</span></span><br><span class="line">): <span class="function"><span class="params">Blob</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 切割base64</span></span><br><span class="line">  <span class="keyword">const</span> arr = (base64 <span class="keyword">as</span> <span class="built_in">string</span>).split(<span class="string">','</span>);</span><br><span class="line">  <span class="keyword">const</span> mime = ((arr[<span class="number">0</span>] <span class="keyword">as</span> <span class="built_in">string</span>).match(<span class="regexp">/:(.*?);/</span>) <span class="keyword">as</span> RegExpMatchArray)[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">const</span> bstr = atob(arr[<span class="number">1</span>]);</span><br><span class="line">  <span class="keyword">let</span> n = bstr.length;</span><br><span class="line">  <span class="keyword">const</span> u8arr = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>(n);</span><br><span class="line">  <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">    u8arr[n] = bstr.charCodeAt(n);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> Blob([u8arr], &#123;</span><br><span class="line">    <span class="keyword">type</span>: mime</span><br><span class="line">  &#125;) <span class="keyword">as</span> Blob;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判断是否pc"><a href="#判断是否pc" class="headerlink" title="判断是否pc"></a>判断是否pc</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> isPc = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> agents = [</span><br><span class="line">    <span class="string">'Android'</span>,</span><br><span class="line">    <span class="string">'iPhone'</span>,</span><br><span class="line">    <span class="string">'SymbianOS'</span>,</span><br><span class="line">    <span class="string">'Windows Phone'</span>,</span><br><span class="line">    <span class="string">'iPad'</span>,</span><br><span class="line">    <span class="string">'iPod'</span></span><br><span class="line">  ];</span><br><span class="line">  <span class="keyword">return</span> !!agents.filter(<span class="function"><span class="params">x</span> =&gt;</span> navigator.userAgent.includes(x)).length;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 <div class="article-tag tagcloud">
   <i class="icon-price-tags icon"></i>
   <ul class="article-tag-list">
@@ -232,14 +231,24 @@
     
     <li class="article-tag-list-item">
       <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color4">SEO</a>
+        class="js-tag article-tag-list-link color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color5">变量提升</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color2">函数声明提升</a>
     </li>
     
   </ul>
 </div>
 
 
-        
+    
 <div class="article-category tagcloud">
   <i class="icon-book icon"></i>
   <ul class="article-tag-list">
@@ -250,24 +259,134 @@
     </li>
     
     <li class="article-tag-list-item">
-      <a href="/blog/categories/前端/SEO//"
-        class="article-tag-list-link color4">SEO</a>
+      <a href="/blog/categories/前端/js//"
+        class="article-tag-list-link color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/前端/js/变量提升//"
+        class="article-tag-list-link color5">变量提升</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/前端/js/变量提升/函数声明提升//"
+        class="article-tag-list-link color2">函数声明提升</a>
     </li>
     
   </ul>
 </div>
 
 
-      </div>
-      <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+    
 
     
     
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
   </div>
-</section>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+  <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+  <p>扫一扫，分享到微信</p>
+  <div class="wx-qrcode">
+    <img src="//pan.baidu.com/share/qrcode?url=https://heiyehk.github.io/blog/%E5%B0%8F%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
+  </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+  <a href="/blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87/" id="article-nav-older" class="article-nav-link-wrap">
+    <div class="article-nav-title">深入理解变量声明提升和函数声明提升</div>
+    <i class="icon-circle-right"></i>
+  </a>
+  
+</nav>
+
+
+
+<aside class="wrap-side-operation">
+  <div class="mod-side-operation">
+    
+    <div class="jump-container" id="js-jump-container" style="display:none;">
+      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+        <i class="icon-font icon-back"></i>
+      </a>
+      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+        <i class="icon-font icon-plane jump-plane"></i>
+      </div>
+    </div>
+    
+    
+    <div class="toc-container tooltip-left">
+      <i class="icon-font icon-category"></i>
+      <div class="tooltip tooltip-east">
+        <span class="tooltip-item">
+        </span>
+        <span class="tooltip-content">
+          <div class="toc-article">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取视频时长"><span class="toc-number">1.</span> <span class="toc-text">获取视频时长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VueRouter"><span class="toc-number">2.</span> <span class="toc-text">VueRouter</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解决多次点击报错问题"><span class="toc-number">2.1.</span> <span class="toc-text">解决多次点击报错问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重置默认路由"><span class="toc-number">2.2.</span> <span class="toc-text">重置默认路由</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象过滤空内容"><span class="toc-number">3.</span> <span class="toc-text">对象过滤空内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#base64转Blob对象"><span class="toc-number">4.</span> <span class="toc-text">base64转Blob对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断是否pc"><span class="toc-number">5.</span> <span class="toc-text">判断是否pc</span></a></li></ol>
+          </div>
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</aside>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -294,10 +413,10 @@
   var yiliaConfig = {
     mathjax: false,
     isHome: false,
-    isPost: false,
+    isPost: true,
     isArchive: false,
     isTag: false,
-    isCategory: true,
+    isCategory: false,
     open_in_new: true,
     toc_hide_index: true,
     root: "/blog/",
