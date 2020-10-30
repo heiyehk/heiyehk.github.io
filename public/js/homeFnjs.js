@@ -11,7 +11,7 @@ var homeFnjs = {
         myinfo: {
           name: 'HeiYe',
           author: 'HeiYehk',
-          description: '不忘初心，方得始终',
+          description: '',
           contact: [
             {
               icon: 'qq',
