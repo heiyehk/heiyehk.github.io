@@ -41,8 +41,11 @@
       <h1 class="name">HeiYe | 黑叶</h1>
       <p class="description" v-text="myinfo.description"></p>
       <div class="router-link">
-        <div class="link" v-for="(item, index) in routerLink">
-          <a :href="item.path" v-text="item.name"></a>
+        <div class="link">
+          <a href="/blog/">博客</a>
+        </div>
+        <div class="link">
+          <a href="/generatejson">Generate Json</a>
         </div>
       </div>
       <div class="contact-list flex-center">

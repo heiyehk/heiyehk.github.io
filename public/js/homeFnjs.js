@@ -35,17 +35,7 @@ var homeFnjs = {
             }
           ]
         },
-        hitokoto: null,
-        routerLink: [
-          {
-            name: '博客',
-            path: '/blog/'
-          },
-          {
-            name: 'Generate Json',
-            path: '/generatejson'
-          }
-        ]
+        hitokoto: null
       }
     })
   },
