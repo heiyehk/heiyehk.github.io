@@ -7,16 +7,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://heiyehk.github.io/blog">
-  <title>HeiYe</title>
+  <title>heiyehk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="黑叶HeiYe博客，一个爱于分享和转载技术、资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。">
+  <meta name="description" content="heiyehk博客，一个爱于分享和转载技术、资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="HeiYe">
+<meta property="og:title" content="heiyehk">
 <meta property="og:url" content="https://heiyehk.github.io/blog/index.html">
-<meta property="og:site_name" content="HeiYe">
-<meta property="og:description" content="黑叶HeiYe博客，一个爱于分享和转载技术、资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。">
+<meta property="og:site_name" content="heiyehk">
+<meta property="og:description" content="heiyehk博客，一个爱于分享和转载技术、资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="HeiYehk">
+<meta property="article:author" content="heiyehk">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="html">
 <meta property="article:tag" content="html5">
@@ -33,7 +33,7 @@
 <meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
   
-  <link rel="alternative" href="/atom.xml" title="HeiYe" type="application/atom+xml">
+  <link rel="alternative" href="/atom.xml" title="heiyehk" type="application/atom+xml">
   
   
   <link rel="icon" href="/blog/assets/favicon.ico">
@@ -65,7 +65,7 @@
       <img src="/blog/assets/images/logo.jpg" class="js-avatar">
     </a>
     <hgroup>
-      <h1 class="header-author"><a href="/blog/">HeiYehk</a></h1>
+      <h1 class="header-author"><a href="/blog/">heiyehk</a></h1>
     </hgroup>
     
     <p class="header-subtitle">不忘初心，方得始终</p>
@@ -130,7 +130,7 @@
         <img src="/blog/assets/images/logo.jpg" class="js-avatar">
       </div>
       <hgroup>
-        <h1 class="header-author js-header-author">HeiYehk</h1>
+        <h1 class="header-author js-header-author">heiyehk</h1>
       </hgroup>
       
       <p class="header-subtitle"><i class="icon icon-quo-left"></i>不忘初心，方得始终<i
@@ -189,6 +189,94 @@
           </div>
           <div id="js-content" class="content-ll">
             
+
+<article id="post-【vue3源码解析】createApp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+
+<h1 itemprop="name">
+  <a class="article-title" href="/blog/%E3%80%90vue3%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E3%80%91createApp/">【vue3源码解析】createApp</a>
+</h1>
+
+
+
+  
+  <a href="/blog/%E3%80%90vue3%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E3%80%91createApp/" class="archive-article-date">
+  <time datetime="2021-04-07T07:17:01.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-04-07</time>
+</a>
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="vue-next仓库"><a href="#vue-next仓库" class="headerlink" title="vue-next仓库"></a>vue-next仓库</h3><p><code>vue-next</code>仓库源码</p>
+<blockquote>
+<p><a href="https://github.com/vuejs/vue-next" target="_blank" rel="noopener">https://github.com/vuejs/vue-next</a></p>
+</blockquote>
+<p>克隆下来之后<code>yarn install</code>安装依赖，这里推荐<code>webstorm</code>进行运行调试，查看<code>packages/runtime-core</code>文件夹</p>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p><code>packages/runtime-core/__tests__/apiCreateApp.spec.ts</code>调试单测文件，<br>跳转到<code>packages/runtime-core/src/renderer.ts</code>文件</p>
+<h3 id="createApp"><a href="#createApp" class="headerlink" title="createApp"></a>createApp</h3><p>该函数创建了一个实例。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// packages/runtime-test/src/index.ts</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">createRenderer</span>&lt;</span></span><br><span class="line"><span class="function">  <span class="title">HostNode</span> = <span class="title">RendererNode</span>,</span></span><br><span class="line"><span class="function">  <span class="title">HostElement</span> = <span class="title">RendererElement</span></span></span><br><span class="line"><span class="function">&gt;(<span class="params">options: RendererOptions&lt;HostNode, HostElement&gt;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> baseCreateRenderer&lt;HostNode, HostElement&gt;(options)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 跳转到下面这个文件</span></span><br><span class="line"><span class="comment">// packages/runtime-test/src/index.ts</span></span><br><span class="line"><span class="keyword">const</span> &#123; render: baseRender, createApp: baseCreateApp &#125; = createRenderer(</span><br><span class="line">  extend(&#123; patchProp &#125;, nodeOps)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><code>createRenderer</code>接受一个合并后的属性的属性，返回一个<code>baseCreateRenderer</code>，而实现<code>baseCreateRenderer</code>就在<code>packages/runtime-core/src/renderer.ts</code>文件中，该文件长达2400行。<br>下面是该文件的源码缩略：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">baseCreateRenderer</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  options: RendererOptions,</span></span></span><br><span class="line"><span class="function"><span class="params">  createHydrationFns?: <span class="keyword">typeof</span> createHydrationFunctions</span></span></span><br><span class="line"><span class="function"><span class="params"></span>): <span class="title">any</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123;</span><br><span class="line">    insert: hostInsert,</span><br><span class="line">    remove: hostRemove,</span><br><span class="line">    patchProp: hostPatchProp,</span><br><span class="line">    createElement: hostCreateElement,</span><br><span class="line">    createText: hostCreateText,</span><br><span class="line">    createComment: hostCreateComment,</span><br><span class="line">    setText: hostSetText,</span><br><span class="line">    setElementText: hostSetElementText,</span><br><span class="line">    parentNode: hostParentNode,</span><br><span class="line">    nextSibling: hostNextSibling,</span><br><span class="line">    setScopeId: hostSetScopeId = NOOP,</span><br><span class="line">    cloneNode: hostCloneNode,</span><br><span class="line">    insertStaticContent: hostInsertStaticContent</span><br><span class="line">  &#125; = options</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ....此处省略两千行，我们先不管</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    render,</span><br><span class="line">    hydrate,</span><br><span class="line">    createApp: createAppAPI(render, hydrate)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法正是返回了<code>createApp</code>的实现函数。</p>
+<h3 id="defineComponent"><a href="#defineComponent" class="headerlink" title="defineComponent"></a>defineComponent</h3><p><code>packages/runtime-core/src/apiDefineComponent.ts</code>进行了一个类型重载。对该文件翻译后。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现，关闭一些无用的操作</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">defineComponent</span>(<span class="params">options: unknown</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> isFunction(options) ? &#123; setup: options, name: options.name &#125; : options</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>defineComponent是一个工具，在声明组件时主要用于类型推断。类型推断在组件选项中提供(作为参数提供)。返回值具有TSX /手动渲染函数/ IDE支持的人工类型。</p>
+</blockquote>
+<p>借用<a href="https://juejin.cn/post/6885953990345883661" target="_blank" rel="noopener">掘金: 江米小枣tonylua </a>的话来说</p>
+<blockquote>
+<p>在结合了 TypeScript 的情况下，传统的 Vue.extends 等定义方法无法对此类组件给出正确的参数类型推断，这就需要引入 defineComponent() 组件包装函数，其在 rfc 文档中的说明为：(参考<a href="https://juejin.cn/post/6885953990345883661" target="_blank" rel="noopener">顺藤摸瓜🍉：用单元测试读懂 vue3 中的 defineComponent</a>)</p>
+</blockquote>
+<h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a>mount</h3><p>待更新…</p>
+
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/blog/%E3%80%90vue3%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E3%80%91createApp/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+  <div class="mod-side-operation">
+    
+    <div class="jump-container" id="js-jump-container" style="display:none;">
+      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+        <i class="icon-font icon-back"></i>
+      </a>
+      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+        <i class="icon-font icon-plane jump-plane"></i>
+      </div>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+
+
+
 
 <article id="post-解决electron安装，卡在install-js不动问题，UnhandledPromiseRejectionWarning：RequestError：readECONNRESE" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -1250,111 +1338,6 @@
 
 
 
-<article id="post-面试灵魂十大问，你们都会回答了吗？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-
-<h1 itemprop="name">
-  <a class="article-title" href="/blog/%E9%9D%A2%E8%AF%95%E7%81%B5%E9%AD%82%E5%8D%81%E5%A4%A7%E9%97%AE%EF%BC%8C%E4%BD%A0%E4%BB%AC%E9%83%BD%E4%BC%9A%E5%9B%9E%E7%AD%94%E4%BA%86%E5%90%97%EF%BC%9F/">面试灵魂十大问，你们都会回答了吗？</a>
-</h1>
-
-
-
-  
-  <a href="/blog/%E9%9D%A2%E8%AF%95%E7%81%B5%E9%AD%82%E5%8D%81%E5%A4%A7%E9%97%AE%EF%BC%8C%E4%BD%A0%E4%BB%AC%E9%83%BD%E4%BC%9A%E5%9B%9E%E7%AD%94%E4%BA%86%E5%90%97%EF%BC%9F/" class="archive-article-date">
-  <time datetime="2020-04-30T09:03:48.000Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ul>
-<li>你最大的优点和缺点</li>
-<li>你是否接受加班？</li>
-<li>你对薪资有什么要求吗？</li>
-<li>在五年的时间内，你的职业规划？</li>
-<li>我们为什么要聘用你？</li>
-<li>你对于我们公司了解多少？</li>
-<li>你为什么愿意到我们公司？</li>
-<li>与上级意见不一致，如何处理？</li>
-<li>你缺乏工作经验，如何能胜任这份工作？</li>
-<li>工作中与同事发生争执，你会怎么处理？</li>
-</ul>
-    
-    <a class="article-more-a" href="/blog/%E9%9D%A2%E8%AF%95%E7%81%B5%E9%AD%82%E5%8D%81%E5%A4%A7%E9%97%AE%EF%BC%8C%E4%BD%A0%E4%BB%AC%E9%83%BD%E4%BC%9A%E5%9B%9E%E7%AD%94%E4%BA%86%E5%90%97%EF%BC%9F/#more">more >></a>
-    
-    
-
-    
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-<div class="article-tag tagcloud">
-  <i class="icon-price-tags icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color3">面试</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-<div class="article-category tagcloud">
-  <i class="icon-book icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/面试//"
-        class="article-tag-list-link color3">面试</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/blog/%E9%9D%A2%E8%AF%95%E7%81%B5%E9%AD%82%E5%8D%81%E5%A4%A7%E9%97%AE%EF%BC%8C%E4%BD%A0%E4%BB%AC%E9%83%BD%E4%BC%9A%E5%9B%9E%E7%AD%94%E4%BA%86%E5%90%97%EF%BC%9F/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-  <div class="mod-side-operation">
-    
-    <div class="jump-container" id="js-jump-container" style="display:none;">
-      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-        <i class="icon-font icon-back"></i>
-      </a>
-      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-        <i class="icon-font icon-plane jump-plane"></i>
-      </div>
-    </div>
-    
-    
-  </div>
-</aside>
-
-
-
-
-
-
 
 <nav id="page-nav">
   <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/">Next »</a>
@@ -1370,7 +1353,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 HeiYehk All rights reserved. 
+    		&copy; 2021 heiyehk All rights reserved. 
 			</div>
 			<div class="footer-right">
 				<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1509,15 +1492,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1533,7 +1508,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">缓存</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">原型</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">原型链</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1550,14 +1541,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">原型</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">原型链</a>
             </li>
             
             <li class="article-tag-list-item">

@@ -7,13 +7,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://heiyehk.github.io/blog">
-  <title>JS事件循环机制（event loop）之宏任务/微任务 | HeiYe</title>
+  <title>JS事件循环机制（event loop）之宏任务/微任务 | heiyehk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="原文地址：Tasks, microtasks, queues and schedules同类文章 这一次，彻底弄懂 JavaScript 执行机制  鉴于上篇文章有提到过 微任务与宏任务，所以，在此做个细致补充： 话不多说，直接进入正文：   [1] 本文主要根据网上资源总结而来，如有不对，请斧正。 [2] 需要知道的专业名词术语：synchronous：同步任务、asynchronous：异步">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS事件循环机制（event loop）之宏任务&#x2F;微任务">
 <meta property="og:url" content="https://heiyehk.github.io/blog/JS%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6%EF%BC%88event-loop%EF%BC%89%E4%B9%8B%E5%AE%8F%E4%BB%BB%E5%8A%A1-%E5%BE%AE%E4%BB%BB%E5%8A%A1/index.html">
-<meta property="og:site_name" content="HeiYe">
+<meta property="og:site_name" content="heiyehk">
 <meta property="og:description" content="原文地址：Tasks, microtasks, queues and schedules同类文章 这一次，彻底弄懂 JavaScript 执行机制  鉴于上篇文章有提到过 微任务与宏任务，所以，在此做个细致补充： 话不多说，直接进入正文：   [1] 本文主要根据网上资源总结而来，如有不对，请斧正。 [2] 需要知道的专业名词术语：synchronous：同步任务、asynchronous：异步">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/7/14/164974fa38dcffce?imageslim">
@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/7/14/1649751a2eb3953f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 <meta property="article:published_time" content="2020-04-30T06:39:18.000Z">
 <meta property="article:modified_time" content="2020-05-20T08:57:50.635Z">
-<meta property="article:author" content="HeiYehk">
+<meta property="article:author" content="heiyehk">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="JS">
 <meta property="article:tag" content="event loop">
@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/7/14/164974fa38dcffce?imageslim">
   
-  <link rel="alternative" href="/atom.xml" title="HeiYe" type="application/atom+xml">
+  <link rel="alternative" href="/atom.xml" title="heiyehk" type="application/atom+xml">
   
   
   <link rel="icon" href="/blog/assets/favicon.ico">
@@ -63,7 +63,7 @@
       <img src="/blog/assets/images/logo.jpg" class="js-avatar">
     </a>
     <hgroup>
-      <h1 class="header-author"><a href="/blog/">HeiYehk</a></h1>
+      <h1 class="header-author"><a href="/blog/">heiyehk</a></h1>
     </hgroup>
     
     <p class="header-subtitle">不忘初心，方得始终</p>
@@ -128,7 +128,7 @@
         <img src="/blog/assets/images/logo.jpg" class="js-avatar">
       </div>
       <hgroup>
-        <h1 class="header-author js-header-author">HeiYehk</h1>
+        <h1 class="header-author js-header-author">heiyehk</h1>
       </hgroup>
       
       <p class="header-subtitle"><i class="icon icon-quo-left"></i>不忘初心，方得始终<i
@@ -580,7 +580,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 HeiYehk All rights reserved. 
+    		&copy; 2021 heiyehk All rights reserved. 
 			</div>
 			<div class="footer-right">
 				<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -719,15 +719,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -743,7 +735,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">缓存</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">原型</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">原型链</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -760,14 +768,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">原型</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">原型链</a>
             </li>
             
             <li class="article-tag-list-item">

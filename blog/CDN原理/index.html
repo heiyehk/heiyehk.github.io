@@ -7,26 +7,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://heiyehk.github.io/blog">
-  <title>CDN原理 | HeiYe</title>
+  <title>CDN原理 | heiyehk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="传统网站访问方式由于互联网的飞速发展，越来越多的人开始使用并依赖网络，那在膨胀的用户群的现行的网络负载能力就形成了矛盾，人们开始希望网络更加的快速，而不是在无休止的等待中上网。这样CDN就得到了飞速的发展，那么问题就来了，CDN是如何来解决这个问题的呢? 传统的网站访问过程为:  用户在浏览器中输入要访问的域名; 浏览器向域名解析服务器发出解析请求，获得此域名对应的IP 地址; 浏览器利用所得到的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CDN原理">
 <meta property="og:url" content="https://heiyehk.github.io/blog/CDN%E5%8E%9F%E7%90%86/index.html">
-<meta property="og:site_name" content="HeiYe">
+<meta property="og:site_name" content="heiyehk">
 <meta property="og:description" content="传统网站访问方式由于互联网的飞速发展，越来越多的人开始使用并依赖网络，那在膨胀的用户群的现行的网络负载能力就形成了矛盾，人们开始希望网络更加的快速，而不是在无休止的等待中上网。这样CDN就得到了飞速的发展，那么问题就来了，CDN是如何来解决这个问题的呢? 传统的网站访问过程为:  用户在浏览器中输入要访问的域名; 浏览器向域名解析服务器发出解析请求，获得此域名对应的IP 地址; 浏览器利用所得到的">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic2.zhimg.com/80/v2-ca8f789d66f23fe6043356e255d07d25_720w.jpg">
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-7b2506ccba72ac30c54e4cf74741beec_720w.jpg">
 <meta property="article:published_time" content="2020-05-20T07:30:35.000Z">
 <meta property="article:modified_time" content="2020-05-20T08:56:54.949Z">
-<meta property="article:author" content="HeiYehk">
+<meta property="article:author" content="heiyehk">
 <meta property="article:tag" content="浏览器">
 <meta property="article:tag" content="CDN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-ca8f789d66f23fe6043356e255d07d25_720w.jpg">
   
-  <link rel="alternative" href="/atom.xml" title="HeiYe" type="application/atom+xml">
+  <link rel="alternative" href="/atom.xml" title="heiyehk" type="application/atom+xml">
   
   
   <link rel="icon" href="/blog/assets/favicon.ico">
@@ -58,7 +58,7 @@
       <img src="/blog/assets/images/logo.jpg" class="js-avatar">
     </a>
     <hgroup>
-      <h1 class="header-author"><a href="/blog/">HeiYehk</a></h1>
+      <h1 class="header-author"><a href="/blog/">heiyehk</a></h1>
     </hgroup>
     
     <p class="header-subtitle">不忘初心，方得始终</p>
@@ -123,7 +123,7 @@
         <img src="/blog/assets/images/logo.jpg" class="js-avatar">
       </div>
       <hgroup>
-        <h1 class="header-author js-header-author">HeiYehk</h1>
+        <h1 class="header-author js-header-author">heiyehk</h1>
       </hgroup>
       
       <p class="header-subtitle"><i class="icon icon-quo-left"></i>不忘初心，方得始终<i
@@ -407,7 +407,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 HeiYehk All rights reserved. 
+    		&copy; 2021 heiyehk All rights reserved. 
 			</div>
 			<div class="footer-right">
 				<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -546,15 +546,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -570,7 +562,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">缓存</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">原型</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">原型链</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -587,14 +595,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">原型</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">原型链</a>
             </li>
             
             <li class="article-tag-list-item">
