@@ -9,8 +9,8 @@ var homeFnjs = {
       el: '#app',
       data: {
         myinfo: {
-          name: 'HeiYe',
-          author: 'HeiYehk',
+          name: 'Heiyehk',
+          author: 'Heiyehk',
           description: '',
           contact: [
             {
