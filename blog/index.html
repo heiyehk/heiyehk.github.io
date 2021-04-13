@@ -190,6 +190,114 @@
           <div id="js-content" class="content-ll">
             
 
+<article id="post-webpack项目中获取命令行参数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+
+<h1 itemprop="name">
+  <a class="article-title" href="/blog/webpack%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/">webpack项目中获取命令行参数  [原创]</a>
+</h1>
+
+
+
+  
+  <a href="/blog/webpack%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/" class="archive-article-date">
+  <time datetime="2021-04-13T08:12:40.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-04-13</time>
+</a>
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>以下内容均在vue中使用，原理和webpack同理</p>
+</blockquote>
+<h2 id="获取命令行静态参数cross-env"><a href="#获取命令行静态参数cross-env" class="headerlink" title="获取命令行静态参数cross-env"></a>获取命令行静态参数cross-env</h2><p><code>cross-env</code>是一个广受环境可以获取npm脚本中写好的参数，但是这样在项目中只能获取固定的，下面是这个库的一些使用方法</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add cross-env -D</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">npm i cross-env -D</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/blog/webpack%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/#more">more >></a>
+    
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+<div class="article-tag tagcloud">
+  <i class="icon-price-tags icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color3">webpack</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color4">vue</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color1">vue.config</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+<div class="article-category tagcloud">
+  <i class="icon-book icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/webpack//"
+        class="article-tag-list-link color3">webpack</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/blog/webpack%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+  <div class="mod-side-operation">
+    
+    <div class="jump-container" id="js-jump-container" style="display:none;">
+      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+        <i class="icon-font icon-back"></i>
+      </a>
+      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+        <i class="icon-font icon-plane jump-plane"></i>
+      </div>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+
+
+
+
 <article id="post-【vue3源码解析】createApp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -197,7 +305,7 @@
   
 
 <h1 itemprop="name">
-  <a class="article-title" href="/blog/%E3%80%90vue3%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E3%80%91createApp/">【vue3源码解析】createApp</a>
+  <a class="article-title" href="/blog/%E3%80%90vue3%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E3%80%91createApp/">【vue3源码解析】createApp [原创]</a>
 </h1>
 
 
@@ -219,22 +327,9 @@
 </blockquote>
 <p>克隆下来之后<code>yarn install</code>安装依赖，这里推荐<code>webstorm</code>进行运行调试，查看<code>packages/runtime-core</code>文件夹</p>
 <h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p><code>packages/runtime-core/__tests__/apiCreateApp.spec.ts</code>调试单测文件，<br>跳转到<code>packages/runtime-core/src/renderer.ts</code>文件</p>
-<h3 id="createApp"><a href="#createApp" class="headerlink" title="createApp"></a>createApp</h3><p>该函数创建了一个实例。</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// packages/runtime-test/src/index.ts</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">createRenderer</span>&lt;</span></span><br><span class="line"><span class="function">  <span class="title">HostNode</span> = <span class="title">RendererNode</span>,</span></span><br><span class="line"><span class="function">  <span class="title">HostElement</span> = <span class="title">RendererElement</span></span></span><br><span class="line"><span class="function">&gt;(<span class="params">options: RendererOptions&lt;HostNode, HostElement&gt;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> baseCreateRenderer&lt;HostNode, HostElement&gt;(options)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 跳转到下面这个文件</span></span><br><span class="line"><span class="comment">// packages/runtime-test/src/index.ts</span></span><br><span class="line"><span class="keyword">const</span> &#123; render: baseRender, createApp: baseCreateApp &#125; = createRenderer(</span><br><span class="line">  extend(&#123; patchProp &#125;, nodeOps)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p><code>createRenderer</code>接受一个合并后的属性的属性，返回一个<code>baseCreateRenderer</code>，而实现<code>baseCreateRenderer</code>就在<code>packages/runtime-core/src/renderer.ts</code>文件中，该文件长达2400行。<br>下面是该文件的源码缩略：</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">baseCreateRenderer</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  options: RendererOptions,</span></span></span><br><span class="line"><span class="function"><span class="params">  createHydrationFns?: <span class="keyword">typeof</span> createHydrationFunctions</span></span></span><br><span class="line"><span class="function"><span class="params"></span>): <span class="title">any</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123;</span><br><span class="line">    insert: hostInsert,</span><br><span class="line">    remove: hostRemove,</span><br><span class="line">    patchProp: hostPatchProp,</span><br><span class="line">    createElement: hostCreateElement,</span><br><span class="line">    createText: hostCreateText,</span><br><span class="line">    createComment: hostCreateComment,</span><br><span class="line">    setText: hostSetText,</span><br><span class="line">    setElementText: hostSetElementText,</span><br><span class="line">    parentNode: hostParentNode,</span><br><span class="line">    nextSibling: hostNextSibling,</span><br><span class="line">    setScopeId: hostSetScopeId = NOOP,</span><br><span class="line">    cloneNode: hostCloneNode,</span><br><span class="line">    insertStaticContent: hostInsertStaticContent</span><br><span class="line">  &#125; = options</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ....此处省略两千行，我们先不管</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    render,</span><br><span class="line">    hydrate,</span><br><span class="line">    createApp: createAppAPI(render, hydrate)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个方法正是返回了<code>createApp</code>的实现函数。</p>
-<h3 id="defineComponent"><a href="#defineComponent" class="headerlink" title="defineComponent"></a>defineComponent</h3><p><code>packages/runtime-core/src/apiDefineComponent.ts</code>进行了一个类型重载。对该文件翻译后。</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现，关闭一些无用的操作</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">defineComponent</span>(<span class="params">options: unknown</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> isFunction(options) ? &#123; setup: options, name: options.name &#125; : options</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>defineComponent是一个工具，在声明组件时主要用于类型推断。类型推断在组件选项中提供(作为参数提供)。返回值具有TSX /手动渲染函数/ IDE支持的人工类型。</p>
-</blockquote>
-<p>借用<a href="https://juejin.cn/post/6885953990345883661" target="_blank" rel="noopener">掘金: 江米小枣tonylua </a>的话来说</p>
-<blockquote>
-<p>在结合了 TypeScript 的情况下，传统的 Vue.extends 等定义方法无法对此类组件给出正确的参数类型推断，这就需要引入 defineComponent() 组件包装函数，其在 rfc 文档中的说明为：(参考<a href="https://juejin.cn/post/6885953990345883661" target="_blank" rel="noopener">顺藤摸瓜🍉：用单元测试读懂 vue3 中的 defineComponent</a>)</p>
-</blockquote>
-<h3 id="mount"><a href="#mount" class="headerlink" title="mount"></a>mount</h3><p>待更新…</p>
-
+    
+    <a class="article-more-a" href="/blog/%E3%80%90vue3%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E3%80%91createApp/#more">more >></a>
+    
     
 
     
@@ -388,7 +483,7 @@
   
 
 <h1 itemprop="name">
-  <a class="article-title" href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%BA%8C%E3%80%81electron-vue3%E5%BC%80%E5%8F%91%E5%86%85%E5%AE%B9/">【electron+vue3+ts实战便笺exe】二、electron+vue3开发内容</a>
+  <a class="article-title" href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%BA%8C%E3%80%81electron-vue3%E5%BC%80%E5%8F%91%E5%86%85%E5%AE%B9/">【electron+vue3+ts实战便笺exe】二、electron+vue3开发内容  [原创]</a>
 </h1>
 
 
@@ -509,7 +604,7 @@
   
 
 <h1 itemprop="name">
-  <a class="article-title" href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6%E9%85%8D%E7%BD%AE/">【electron+vue3+ts实战便笺exe】一、搭建框架配置</a>
+  <a class="article-title" href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6%E9%85%8D%E7%BD%AE/">【electron+vue3+ts实战便笺exe】一、搭建框架配置  [原创]</a>
 </h1>
 
 
@@ -1226,118 +1321,6 @@
 
 
 
-<article id="post-CDN原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-
-<h1 itemprop="name">
-  <a class="article-title" href="/blog/CDN%E5%8E%9F%E7%90%86/">CDN原理</a>
-</h1>
-
-
-
-  
-  <a href="/blog/CDN%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  <time datetime="2020-05-20T07:30:35.000Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="传统网站访问方式"><a href="#传统网站访问方式" class="headerlink" title="传统网站访问方式"></a>传统网站访问方式</h3><p>由于互联网的飞速发展，越来越多的人开始使用并依赖网络，那在膨胀的用户群的现行的网络负载能力就形成了矛盾，人们开始希望网络更加的快速，而不是在无休止的等待中上网。这样CDN就得到了飞速的发展，那么问题就来了，CDN是如何来解决这个问题的呢?</p>
-<p>传统的网站访问过程为:</p>
-<ul>
-<li>用户在浏览器中输入要访问的域名;</li>
-<li>浏览器向域名解析服务器发出解析请求，获得此域名对应的IP 地址;</li>
-<li>浏览器利用所得到的IP 地址，向该IP对应的服务器发出访问请求;</li>
-<li>服务器对此响应，将数据回传至用户浏览器端显示出来。</li>
-</ul>
-<p><img src="https://pic2.zhimg.com/80/v2-ca8f789d66f23fe6043356e255d07d25_720w.jpg" alt="https://pic2.zhimg.com/80/v2-ca8f789d66f23fe6043356e255d07d25_720w.jpg"></p>
-    
-    <a class="article-more-a" href="/blog/CDN%E5%8E%9F%E7%90%86/#more">more >></a>
-    
-    
-
-    
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-<div class="article-tag tagcloud">
-  <i class="icon-price-tags icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color4">浏览器</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color4">CDN</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-<div class="article-category tagcloud">
-  <i class="icon-book icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/浏览器//"
-        class="article-tag-list-link color4">浏览器</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/浏览器/CDN//"
-        class="article-tag-list-link color4">CDN</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/blog/CDN%E5%8E%9F%E7%90%86/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-  <div class="mod-side-operation">
-    
-    <div class="jump-container" id="js-jump-container" style="display:none;">
-      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-        <i class="icon-font icon-back"></i>
-      </a>
-      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-        <i class="icon-font icon-plane jump-plane"></i>
-      </div>
-    </div>
-    
-    
-  </div>
-</aside>
-
-
-
-
-
-
 
 <nav id="page-nav">
   <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/">Next »</a>
@@ -1444,6 +1427,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">CDN</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">前端</a>
             </li>
             
@@ -1452,7 +1439,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">CDN</a>
+              <a href="javascript:void(0)" class="js-tag color3">js</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1472,23 +1471,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">js</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">SEO</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">能力提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">vue</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">vue.config</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1508,15 +1507,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">DNS</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1528,19 +1523,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">js底层</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">变量提升</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">js底层</a>
             </li>
             
             <li class="article-tag-list-item">

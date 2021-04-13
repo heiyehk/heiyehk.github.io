@@ -190,6 +190,147 @@
           <div id="js-content" class="content-ll">
             
 
+<article id="post-浏览器的回流与重绘-Reflow-Repaint" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+
+<h1 itemprop="name">
+  <a class="article-title" href="/blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98-Reflow-Repaint/">浏览器的回流与重绘 (Reflow &amp; Repaint)</a>
+</h1>
+
+
+
+  
+  <a href="/blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98-Reflow-Repaint/" class="archive-article-date">
+  <time datetime="2020-04-30T04:40:46.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2020-04-30</time>
+</a>
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>在讨论回流与重绘之前，我们要知道：</p>
+<ol>
+<li>浏览器使用流式布局模型 (Flow Based Layout)。</li>
+<li>浏览器会把<code>HTML</code>解析成<code>DOM</code>，把<code>CSS</code>解析成<code>CSSOM</code>，<code>DOM</code>和<code>CSSOM</code>合并就产生了<code>Render Tree</code>。</li>
+<li>有了<code>RenderTree</code>，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。</li>
+<li>由于浏览器使用流式布局，对<code>Render Tree</code>的计算通常只需要遍历一次就可以完成，但<code>table</code>及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用<code>table</code>布局的原因之一。</li>
+</ol>
+<p>一句话：回流必将引起重绘，重绘不一定会引起回流。</p>
+    
+    <a class="article-more-a" href="/blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98-Reflow-Repaint/#more">more >></a>
+    
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+<div class="article-tag tagcloud">
+  <i class="icon-price-tags icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color3">回流</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color3">重绘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color2">Reflow</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color3">Repaint</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+<div class="article-category tagcloud">
+  <i class="icon-book icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/浏览器//"
+        class="article-tag-list-link color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/浏览器/回流//"
+        class="article-tag-list-link color3">回流</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/浏览器/回流/重绘//"
+        class="article-tag-list-link color3">重绘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/浏览器/回流/重绘/Reflow//"
+        class="article-tag-list-link color2">Reflow</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/浏览器/回流/重绘/Reflow/Repaint//"
+        class="article-tag-list-link color3">Repaint</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98-Reflow-Repaint/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+  <div class="mod-side-operation">
+    
+    <div class="jump-container" id="js-jump-container" style="display:none;">
+      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+        <i class="icon-font icon-back"></i>
+      </a>
+      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+        <i class="icon-font icon-plane jump-plane"></i>
+      </div>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+
+
+
+
 <article id="post-HTML5-新特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -754,6 +895,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">CDN</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">前端</a>
             </li>
             
@@ -762,7 +907,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">CDN</a>
+              <a href="javascript:void(0)" class="js-tag color3">js</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -782,23 +939,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">js</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">SEO</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">能力提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">vue</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">vue.config</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -818,15 +975,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">DNS</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -838,19 +991,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">js底层</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">变量提升</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">js底层</a>
             </li>
             
             <li class="article-tag-list-item">
