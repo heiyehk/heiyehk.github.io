@@ -213,3 +213,12 @@ body,
     margin: 30px auto;
   }
 }
+
+.firend-links {
+  text-align: center;
+  margin-top: 50px;
+}
+.firend-links a,
+.firend-links span {
+  font-size: 14px;
+}
