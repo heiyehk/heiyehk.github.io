@@ -17,7 +17,7 @@
 <meta property="og:description" content="一、RFC是啥?“RFC”(request for comments) 请求评议，目的是为新功能进入框架提供一致且受控的路径。很多变化，包括bug修复和文档说明的更进可以在日常的GayHub工作流中实施和评估。但是有些实质性的变化，我们要求这些变化经历一个设计过程，并且在Vue核心团队和社区中一致通过。 二、RFC生命周期一个RFC会经历以下阶段： Pending：这个RFC被作为一个PR(pul">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-15T06:59:19.000Z">
-<meta property="article:modified_time" content="2021-04-15T07:03:40.875Z">
+<meta property="article:modified_time" content="2021-04-19T05:05:33.499Z">
 <meta property="article:author" content="heiyehk">
 <meta property="article:tag" content="vue">
 <meta property="article:tag" content="RFCs">
@@ -78,6 +78,8 @@
     <a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     
     
+    
+    <a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
     
     
     
@@ -207,6 +209,7 @@
 <p>Active：这个RFC被合并并且正在实施。</p>
 <p>Landed：这个RFC提出的更改在实际版本中被发布。</p>
 <p>Rejected：这个RFC的PR没被否决。</p>
+<a id="more"></a>
 <p>三、什么时候遵循这个过程<br>如果你的改变涉及如下项目模块，你就需要走这个流程</p>
 <p>Vue core<br>Vue Router<br>Vuex<br>Vue CLI<br>我们限制这些仓库的RFC流程，以便以一种更易于管理的方式来检验这个流程，同时也想在将来将其扩展到vue组织下的更多项目中。目前，如果你希望对其他项目提一些修改建议，请用他们的对应的issue列表。</p>
 <p>构成一个“实质性”变化的定义是基于社区规范的演变，可能包含以下几点：</p>
@@ -432,19 +435,24 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
     
+    
+    
 
     <ul style="width: 70%">
       
       
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)"
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)"
           q-class="active:innerArchive">所有文章</a></li>
       
       
       
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)"
+          q-class="active:friends">友情链接</a></li>
       
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)"
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)"
           q-class="active:aboutme">本站声明</a></li>
       
       
@@ -470,10 +478,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">面试</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">CDN</a>
             </li>
             
@@ -483,6 +487,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">面试</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">js</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">vue</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">RFCs</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -502,23 +534,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">js</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">能力提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">闭包</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">vue.config</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -534,31 +566,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">vue</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">vue.config</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">DNS</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -570,15 +578,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">typescript</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">原型</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">原型链</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">typescript</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -611,10 +623,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">V8</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">RFCs</a>
             </li>
             
             <div class="clearfix"></div>
@@ -662,6 +670,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       </section>
       
 
+    
+      <section class="tools-section tools-section-friends" q-show="friends">
+        
+        <ul class="search-ul">
+          
+          <li class="search-li">
+            <a href="https://www.sumicode.com/" target="_blank" class="search-title"><i
+                class="icon-quo-left icon"></i>粟米社区</a>
+          </li>
+          
+        </ul>
+        
+    	</section>
     
 
         

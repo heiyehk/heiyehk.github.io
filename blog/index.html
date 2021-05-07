@@ -89,6 +89,8 @@
     
     
     
+    <a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
+    
     
     
     <a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">本站声明</a>
@@ -219,15 +221,9 @@
 <p>Active：这个RFC被合并并且正在实施。</p>
 <p>Landed：这个RFC提出的更改在实际版本中被发布。</p>
 <p>Rejected：这个RFC的PR没被否决。</p>
-<p>三、什么时候遵循这个过程<br>如果你的改变涉及如下项目模块，你就需要走这个流程</p>
-<p>Vue core<br>Vue Router<br>Vuex<br>Vue CLI<br>我们限制这些仓库的RFC流程，以便以一种更易于管理的方式来检验这个流程，同时也想在将来将其扩展到vue组织下的更多项目中。目前，如果你希望对其他项目提一些修改建议，请用他们的对应的issue列表。</p>
-<p>构成一个“实质性”变化的定义是基于社区规范的演变，可能包含以下几点：</p>
-<p>创建了一个新API的新特性<br>改变了现存的一个API的定义或行为<br>删除一个已经发布的功能的其中的特性<br>关于新的习惯用法或约定的介绍，即使他们不包含对Vue本身代码的修改<br>有些不需要RFC的改变：</p>
-<p>添加提高目标、数量的质量标准（例如提速、对浏览器更好的支持）<br>修正客观存在的不正确的表现<br>重新措辞、重组或重构<br>添加或移除警告<br>添加的内容只被Vue的实现者注意到，对用户不可见<br>如果你未通过RFC流程提交了一个新特性的合并请求，它可能会被关闭，并且要求先走RFC流程。</p>
-<blockquote>
-<p>原文: <a href="https://github.com/vuejs/rfcs" target="_blank" rel="noopener">https://github.com/vuejs/rfcs</a><br>转自翻译: <a href="https://blog.csdn.net/weixin_42423019/article/details/109049810" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42423019/article/details/109049810</a><br>更多参考: <a href="https://www.yuque.com/xixiaobai/xomql8/uxuehg" target="_blank" rel="noopener">https://www.yuque.com/xixiaobai/xomql8/uxuehg</a></p>
-</blockquote>
-
+    
+    <a class="article-more-a" href="/blog/Vue-RFCs/#more">more >></a>
+    
     
 
     
@@ -571,12 +567,12 @@
     
     <li class="article-tag-list-item">
       <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color3">webpack</a>
+        class="js-tag article-tag-list-link color4">vue</a>
     </li>
     
     <li class="article-tag-list-item">
       <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color4">vue</a>
+        class="js-tag article-tag-list-link color3">webpack</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1377,19 +1373,24 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
     
+    
+    
 
     <ul style="width: 70%">
       
       
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)"
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)"
           q-class="active:innerArchive">所有文章</a></li>
       
       
       
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)"
+          q-class="active:friends">友情链接</a></li>
       
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)"
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)"
           q-class="active:aboutme">本站声明</a></li>
       
       
@@ -1415,10 +1416,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">面试</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">CDN</a>
             </li>
             
@@ -1428,6 +1425,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color1">HTML5</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">面试</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">js</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">vue</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">RFCs</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1447,23 +1472,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">js</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color5">能力提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">闭包</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">vue.config</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1479,31 +1504,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">闭包</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">webpack</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">vue</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">vue.config</a>
-            </li>
-            
-            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">DNS</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1515,15 +1516,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">typescript</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">原型</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color4">原型链</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">typescript</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1556,10 +1561,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">V8</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">RFCs</a>
             </li>
             
             <div class="clearfix"></div>
@@ -1607,6 +1608,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       </section>
       
 
+    
+      <section class="tools-section tools-section-friends" q-show="friends">
+        
+        <ul class="search-ul">
+          
+          <li class="search-li">
+            <a href="https://www.sumicode.com/" target="_blank" class="search-title"><i
+                class="icon-quo-left icon"></i>粟米社区</a>
+          </li>
+          
+        </ul>
+        
+    	</section>
     
 
         

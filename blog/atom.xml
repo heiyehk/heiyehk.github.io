@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://heiyehk.github.io/blog/"/>
-  <updated>2021-04-15T07:03:40.875Z</updated>
+  <updated>2021-04-19T05:05:33.499Z</updated>
   <id>https://heiyehk.github.io/blog/</id>
   
   <author>
@@ -21,16 +21,18 @@
     <link href="https://heiyehk.github.io/blog/Vue-RFCs/"/>
     <id>https://heiyehk.github.io/blog/Vue-RFCs/</id>
     <published>2021-04-15T06:59:19.000Z</published>
-    <updated>2021-04-15T07:03:40.875Z</updated>
+    <updated>2021-04-19T05:05:33.499Z</updated>
     
-    <content type="html"><![CDATA[<p>一、RFC是啥?<br>“RFC”(request for comments) 请求评议，目的是为新功能进入框架提供一致且受控的路径。很多变化，包括bug修复和文档说明的更进可以在日常的GayHub工作流中实施和评估。但是有些实质性的变化，我们要求这些变化经历一个设计过程，并且在Vue核心团队和社区中一致通过。</p><p>二、RFC生命周期<br>一个RFC会经历以下阶段：</p><p>Pending：这个RFC被作为一个PR(pull request)被提交。</p><p>Active：这个RFC被合并并且正在实施。</p><p>Landed：这个RFC提出的更改在实际版本中被发布。</p><p>Rejected：这个RFC的PR没被否决。</p><p>三、什么时候遵循这个过程<br>如果你的改变涉及如下项目模块，你就需要走这个流程</p><p>Vue core<br>Vue Router<br>Vuex<br>Vue CLI<br>我们限制这些仓库的RFC流程，以便以一种更易于管理的方式来检验这个流程，同时也想在将来将其扩展到vue组织下的更多项目中。目前，如果你希望对其他项目提一些修改建议，请用他们的对应的issue列表。</p><p>构成一个“实质性”变化的定义是基于社区规范的演变，可能包含以下几点：</p><p>创建了一个新API的新特性<br>改变了现存的一个API的定义或行为<br>删除一个已经发布的功能的其中的特性<br>关于新的习惯用法或约定的介绍，即使他们不包含对Vue本身代码的修改<br>有些不需要RFC的改变：</p><p>添加提高目标、数量的质量标准（例如提速、对浏览器更好的支持）<br>修正客观存在的不正确的表现<br>重新措辞、重组或重构<br>添加或移除警告<br>添加的内容只被Vue的实现者注意到，对用户不可见<br>如果你未通过RFC流程提交了一个新特性的合并请求，它可能会被关闭，并且要求先走RFC流程。</p><blockquote><p>原文: <a href="https://github.com/vuejs/rfcs" target="_blank" rel="noopener">https://github.com/vuejs/rfcs</a><br>转自翻译: <a href="https://blog.csdn.net/weixin_42423019/article/details/109049810" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42423019/article/details/109049810</a><br>更多参考: <a href="https://www.yuque.com/xixiaobai/xomql8/uxuehg" target="_blank" rel="noopener">https://www.yuque.com/xixiaobai/xomql8/uxuehg</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>一、RFC是啥?<br>“RFC”(request for comments) 请求评议，目的是为新功能进入框架提供一致且受控的路径。很多变化，包括bug修复和文档说明的更进可以在日常的GayHub工作流中实施和评估。但是有些实质性的变化，我们要求这些变化经历一个设计过程，并且在Vue核心团队和社区中一致通过。</p><p>二、RFC生命周期<br>一个RFC会经历以下阶段：</p><p>Pending：这个RFC被作为一个PR(pull request)被提交。</p><p>Active：这个RFC被合并并且正在实施。</p><p>Landed：这个RFC提出的更改在实际版本中被发布。</p><p>Rejected：这个RFC的PR没被否决。</p><a id="more"></a><p>三、什么时候遵循这个过程<br>如果你的改变涉及如下项目模块，你就需要走这个流程</p><p>Vue core<br>Vue Router<br>Vuex<br>Vue CLI<br>我们限制这些仓库的RFC流程，以便以一种更易于管理的方式来检验这个流程，同时也想在将来将其扩展到vue组织下的更多项目中。目前，如果你希望对其他项目提一些修改建议，请用他们的对应的issue列表。</p><p>构成一个“实质性”变化的定义是基于社区规范的演变，可能包含以下几点：</p><p>创建了一个新API的新特性<br>改变了现存的一个API的定义或行为<br>删除一个已经发布的功能的其中的特性<br>关于新的习惯用法或约定的介绍，即使他们不包含对Vue本身代码的修改<br>有些不需要RFC的改变：</p><p>添加提高目标、数量的质量标准（例如提速、对浏览器更好的支持）<br>修正客观存在的不正确的表现<br>重新措辞、重组或重构<br>添加或移除警告<br>添加的内容只被Vue的实现者注意到，对用户不可见<br>如果你未通过RFC流程提交了一个新特性的合并请求，它可能会被关闭，并且要求先走RFC流程。</p><blockquote><p>原文: <a href="https://github.com/vuejs/rfcs" target="_blank" rel="noopener">https://github.com/vuejs/rfcs</a><br>转自翻译: <a href="https://blog.csdn.net/weixin_42423019/article/details/109049810" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42423019/article/details/109049810</a><br>更多参考: <a href="https://www.yuque.com/xixiaobai/xomql8/uxuehg" target="_blank" rel="noopener">https://www.yuque.com/xixiaobai/xomql8/uxuehg</a></p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;一、RFC是啥?&lt;br&gt;“RFC”(request for comments) 请求评议，目的是为新功能进入框架提供一致且受控的路径。很多变化，包括bug修复和文档说明的更进可以在日常的GayHub工作流中实施和评估。但是有些实质性的变化，我们要求这些变化经历一个设计过程，
-      
+      &lt;p&gt;一、RFC是啥?&lt;br&gt;“RFC”(request for comments) 请求评议，目的是为新功能进入框架提供一致且受控的路径。很多变化，包括bug修复和文档说明的更进可以在日常的GayHub工作流中实施和评估。但是有些实质性的变化，我们要求这些变化经历一个设计过程，并且在Vue核心团队和社区中一致通过。&lt;/p&gt;
+&lt;p&gt;二、RFC生命周期&lt;br&gt;一个RFC会经历以下阶段：&lt;/p&gt;
+&lt;p&gt;Pending：这个RFC被作为一个PR(pull request)被提交。&lt;/p&gt;
+&lt;p&gt;Active：这个RFC被合并并且正在实施。&lt;/p&gt;
+&lt;p&gt;Landed：这个RFC提出的更改在实际版本中被发布。&lt;/p&gt;
+&lt;p&gt;Rejected：这个RFC的PR没被否决。&lt;/p&gt;
     
     </summary>
     
@@ -135,9 +137,9 @@
       <category term="vue.config" scheme="https://heiyehk.github.io/blog/categories/webpack/vue/vue-config/"/>
     
     
-      <category term="webpack" scheme="https://heiyehk.github.io/blog/tags/webpack/"/>
-    
       <category term="vue" scheme="https://heiyehk.github.io/blog/tags/vue/"/>
+    
+      <category term="webpack" scheme="https://heiyehk.github.io/blog/tags/webpack/"/>
     
       <category term="vue.config" scheme="https://heiyehk.github.io/blog/tags/vue-config/"/>
     
