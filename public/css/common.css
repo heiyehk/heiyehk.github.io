@@ -16,3 +16,54 @@
 ::-webkit-scrollbar-thumb {background-color: #ccc;}
 
 a:active{color: #333;}
+.tree {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.tree-child {
+  position: absolute;
+  bottom: 0;
+}
+.tree-child::before {
+  content: '';
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-bottom: 30px solid #52c41a;
+  border-right: 20px solid transparent;
+  bottom: 0;
+}
+.tree-child::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: #333;
+  bottom: 0;
+}
+.t-c-1 {
+  left: 10px;
+}
+.t-c-1::before {
+  bottom: 30px;
+}
+.t-c-1::after {
+  left: 15px;
+}
+.t-c-2 {
+  left: 30px;
+}
+.t-c-2::before {
+  bottom: 30px;
+  border-left: 30px solid transparent;
+  border-bottom: 40px solid #52c41a;
+  border-right: 30px solid transparent;
+  bottom: 40px;
+}
+.t-c-2::after {
+  width: 14px;
+  height: 40px;
+  left: 24px;
+}
