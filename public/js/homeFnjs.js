@@ -14,11 +14,6 @@ var homeFnjs = {
           description: '',
           contact: [
             {
-              icon: 'qq',
-              name: 'QQ',
-              info: 'http://wpa.qq.com/msgrd?v=1&uin=1374918347&menu=yes'
-            },
-            {
               icon: 'email',
               name: 'Email',
               info: 'mailto:heiyehk@foxmail.com'
@@ -26,7 +21,7 @@ var homeFnjs = {
             {
               icon: 'juejin',
               name: '掘金',
-              info: 'https://juejin.im/heiyehk'
+              info: 'https://juejin.im/3650034335225112'
             },
             {
               icon: 'git',
