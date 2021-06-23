@@ -192,6 +192,313 @@
           <div id="js-content" class="content-ll">
             
 
+<article id="post-Rollup插件（第二部分）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+
+<h1 itemprop="name">
+  <a class="article-title" href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/">Rollup插件（第二部分）</a>
+</h1>
+
+
+
+  
+  <a href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/" class="archive-article-date">
+  <time datetime="2021-06-23T08:35:53.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-06-23</time>
+</a>
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文翻译自<a href="https://rollupjs.org/guide/en/#plugins-overview" target="_blank" rel="noopener">rollup.js</a>。</p>
+<h3 id="插件上下文"><a href="#插件上下文" class="headerlink" title="插件上下文"></a>插件上下文</h3><p>很多的实用的函数和信息流可以通过this在所有的hooks中流通。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.emitAsset(assetName: <span class="built_in">string</span>, source: <span class="built_in">string</span>) =&gt; <span class="built_in">void</span></span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/#more">more >></a>
+    
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+<div class="article-tag tagcloud">
+  <i class="icon-price-tags icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color2">rollup</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+<div class="article-category tagcloud">
+  <i class="icon-book icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/rollup//"
+        class="article-tag-list-link color2">rollup</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%89/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+  <div class="mod-side-operation">
+    
+    <div class="jump-container" id="js-jump-container" style="display:none;">
+      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+        <i class="icon-font icon-back"></i>
+      </a>
+      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+        <i class="icon-font icon-plane jump-plane"></i>
+      </div>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+
+
+
+
+<article id="post-Rollup插件（第一部分）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+
+<h1 itemprop="name">
+  <a class="article-title" href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/">Rollup插件（第一部分）</a>
+</h1>
+
+
+
+  
+  <a href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/" class="archive-article-date">
+  <time datetime="2021-06-23T08:18:18.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-06-23</time>
+</a>
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文翻译自<a href="https://rollupjs.org/guide/en/#plugins-overview" target="_blank" rel="noopener">rollup.js</a>。</p>
+<p>一个Rollup插件是一个导出了一个函数的包，这个函数返回了一个对象，这个对象中有下面介绍的属性和钩子,这些属性和钩子遵循特定的规范。</p>
+<h3 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h3><p>下面的这个插件将会拦截导入的”virtual-module”模块，它甚至可以用来替换”virtual-module”模块在所有的入口点中的替换成的结果，如下所示</p>
+<p><code>rollup-plugin-my-example.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">myExample</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        name: <span class="string">'my-example'</span>, <span class="comment">// 这个名字将会出现在在警告和报错中</span></span><br><span class="line">        resolveId ( importee ) &#123;</span><br><span class="line">            <span class="keyword">if</span> (importee === <span class="string">'virtual-module'</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> importee; <span class="comment">// 这个告诉rollup不应该通过其他的插件或者检查文件系统去寻找这个id</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>; <span class="comment">// 其他的id不受影响</span></span><br><span class="line">        &#125;,</span><br><span class="line">        load ( id ) &#123;</span><br><span class="line">            <span class="keyword">if</span> (id === <span class="string">'virtual-module'</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">'export default "This is virtual!"'</span>; <span class="comment">// "virtual-module"的源码</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>; <span class="comment">// 其他的id还是通过正常的方式解析</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/#more">more >></a>
+    
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+<div class="article-tag tagcloud">
+  <i class="icon-price-tags icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color2">rollup</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+<div class="article-category tagcloud">
+  <i class="icon-book icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/rollup//"
+        class="article-tag-list-link color2">rollup</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/blog/Rollup%E6%8F%92%E4%BB%B6%EF%BC%88%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%89/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+  <div class="mod-side-operation">
+    
+    <div class="jump-container" id="js-jump-container" style="display:none;">
+      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+        <i class="icon-font icon-back"></i>
+      </a>
+      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+        <i class="icon-font icon-plane jump-plane"></i>
+      </div>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+
+
+
+
+<article id="post-写一个舔狗日记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
+  
+
+<h1 itemprop="name">
+  <a class="article-title" href="/blog/%E5%86%99%E4%B8%80%E4%B8%AA%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/">写一个舔狗日记</a>
+</h1>
+
+
+
+  
+  <a href="/blog/%E5%86%99%E4%B8%80%E4%B8%AA%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/" class="archive-article-date">
+  <time datetime="2021-06-23T08:15:33.000Z" itemprop="datePublished"><i
+      class="icon-calendar icon"></i>2021-06-23</time>
+</a>
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>不要让自己的底限成为你的上限</p>
+</blockquote>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ol>
+<li>熊猫头表情包固定的宽高，储存熊猫头高度</li>
+<li>次要内容，标题、时间、天气，此处也需要记录高度以及间距(这些内容可以控制显示)</li>
+<li>随机的文案</li>
+<li>可以生成图片，canvas直接渲染会变成一行，所以需要根据每行多少字做切割</li>
+</ol>
+<h3 id="render-node节点"><a href="#render-node节点" class="headerlink" title="render node节点"></a>render node节点</h3><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d8b1ef2d13fb44559bc583419da1da45~tplv-k3u1fbpfcp-watermark.image" alt="image.png"><br>处理页面文案显示，舔狗文案是从网上扒的，包含了<code>****</code>高亮内容。通过切割<code>**</code>形式高亮文本，小程序无法直接渲染wxml，需要转换成array形式。</p>
+    
+    <a class="article-more-a" href="/blog/%E5%86%99%E4%B8%80%E4%B8%AA%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/#more">more >></a>
+    
+    
+
+    
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+<div class="article-tag tagcloud">
+  <i class="icon-price-tags icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color4">小程序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color2">canvas</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+<div class="article-category tagcloud">
+  <i class="icon-book icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/小程序//"
+        class="article-tag-list-link color4">小程序</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/小程序/canvas//"
+        class="article-tag-list-link color2">canvas</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/blog/%E5%86%99%E4%B8%80%E4%B8%AA%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+  <div class="mod-side-operation">
+    
+    <div class="jump-container" id="js-jump-container" style="display:none;">
+      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+        <i class="icon-font icon-back"></i>
+      </a>
+      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+        <i class="icon-font icon-plane jump-plane"></i>
+      </div>
+    </div>
+    
+    
+  </div>
+</aside>
+
+
+
+
+
+
 <article id="post-Vue-RFCs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -308,7 +615,7 @@
   
 
 <h1 itemprop="name">
-  <a class="article-title" href="/blog/%E5%AD%A6%E4%B9%A0typescript%E7%94%A8%E6%B3%95%E4%B8%80-%E5%AD%A6%E4%B9%A0ts/">学习typescript用法一-学习ts[混杂-持续更新]</a>
+  <a class="article-title" href="/blog/%E5%AD%A6%E4%B9%A0typescript%E7%94%A8%E6%B3%95%E4%B8%80-%E5%AD%A6%E4%B9%A0ts/">学习typescript用法一-学习ts</a>
 </h1>
 
 
@@ -416,7 +723,7 @@
   
 
 <h1 itemprop="name">
-  <a class="article-title" href="/blog/%E5%AD%A6%E4%B9%A0typescript%E7%94%A8%E6%B3%95%E4%BA%8C-%E5%B0%81%E8%A3%85axios/">学习typescript用法二-封装axios[原创]</a>
+  <a class="article-title" href="/blog/%E5%AD%A6%E4%B9%A0typescript%E7%94%A8%E6%B3%95%E4%BA%8C-%E5%B0%81%E8%A3%85axios/">学习typescript用法二-封装axios</a>
 </h1>
 
 
@@ -680,8 +987,32 @@
   <div class="article-info article-info-index">
     
     
+<div class="article-tag tagcloud">
+  <i class="icon-price-tags icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="javascript:void(0)"
+        class="js-tag article-tag-list-link color5">vue3</a>
+    </li>
+    
+  </ul>
+</div>
+
 
     
+<div class="article-category tagcloud">
+  <i class="icon-book icon"></i>
+  <ul class="article-tag-list">
+    
+    <li class="article-tag-list-item">
+      <a href="/blog/categories/vue3//"
+        class="article-tag-list-link color5">vue3</a>
+    </li>
+    
+  </ul>
+</div>
+
 
     
     <p class="article-more-link">
@@ -940,378 +1271,9 @@
 
 
 
-<article id="post-【electron-vue3-ts实战便笺exe】一、搭建框架配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-
-<h1 itemprop="name">
-  <a class="article-title" href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6%E9%85%8D%E7%BD%AE/">【electron+vue3+ts实战便笺exe】一、搭建框架配置  [原创]</a>
-</h1>
-
-
-
-  
-  <a href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  <time datetime="2021-04-07T05:04:33.000Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2021-04-07</time>
-</a>
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <blockquote>
-<p>不要让自己的上限成为你的底线</p>
-</blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>诈尸更新系列，为了跟上脚步，尝试了vue3，在学习vue3的时候顺便学习一手electron和ts，本教程将分别发布，源码会在最后的文章发布。因为还在开发中，目前也是为了防止有些遇到坑不会及时忘掉，所以先整理一部分出来</p>
-<blockquote>
-<p>将分2部分发出教程，因为配置的东西个人感觉有点多并且跟开发内容相关的东西并不是很多，因此单独发出，见谅，第二篇这两天发出，长文警告！⚠。<br><a href="https://juejin.cn/post/6910102694178848781" target="_blank" rel="noopener">【electron+vue3+ts实战便笺exe】二、electron+vue3开发内容</a></p>
-</blockquote>
-    
-    <a class="article-more-a" href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6%E9%85%8D%E7%BD%AE/#more">more >></a>
-    
-    
-
-    
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-<div class="article-tag tagcloud">
-  <i class="icon-price-tags icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color4">electron</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color5">vue3</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color3">ts</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-<div class="article-category tagcloud">
-  <i class="icon-book icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/electron//"
-        class="article-tag-list-link color4">electron</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/electron/vue3//"
-        class="article-tag-list-link color5">vue3</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/electron/vue3/ts//"
-        class="article-tag-list-link color3">ts</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/blog/%E3%80%90electron-vue3-ts%E5%AE%9E%E6%88%98%E4%BE%BF%E7%AC%BAexe%E3%80%91%E4%B8%80%E3%80%81%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-  <div class="mod-side-operation">
-    
-    <div class="jump-container" id="js-jump-container" style="display:none;">
-      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-        <i class="icon-font icon-back"></i>
-      </a>
-      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-        <i class="icon-font icon-plane jump-plane"></i>
-      </div>
-    </div>
-    
-    
-  </div>
-</aside>
-
-
-
-
-
-
-<article id="post-小笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-
-<h1 itemprop="name">
-  <a class="article-title" href="/blog/%E5%B0%8F%E7%AC%94%E8%AE%B0/">小笔记</a>
-</h1>
-
-
-
-  
-  <a href="/blog/%E5%B0%8F%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  <time datetime="2020-09-29T08:40:44.000Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-09-29</time>
-</a>
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="获取视频时长"><a href="#获取视频时长" class="headerlink" title="获取视频时长"></a>获取视频时长</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">getVideoDuration(file: File) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> fileurl = URL.createObjectURL(file);</span><br><span class="line">    <span class="keyword">const</span> audioElement: HTMLAudioElement = <span class="keyword">new</span> Audio(fileurl);</span><br><span class="line">    <span class="keyword">let</span> eventListener: <span class="built_in">any</span>;</span><br><span class="line">    eventListener = audioElement.addEventListener(<span class="string">'loadedmetadata'</span>, <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      resolve(audioElement.duration);</span><br><span class="line">      audioElement.removeEventListener(<span class="string">'loadedmetadata'</span>, eventListener);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/blog/%E5%B0%8F%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
-
-    
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-<div class="article-tag tagcloud">
-  <i class="icon-price-tags icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color3">前端</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color3">js</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color5">变量提升</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color2">函数声明提升</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-<div class="article-category tagcloud">
-  <i class="icon-book icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端//"
-        class="article-tag-list-link color3">前端</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端/js//"
-        class="article-tag-list-link color3">js</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端/js/变量提升//"
-        class="article-tag-list-link color5">变量提升</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端/js/变量提升/函数声明提升//"
-        class="article-tag-list-link color2">函数声明提升</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/blog/%E5%B0%8F%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-  <div class="mod-side-operation">
-    
-    <div class="jump-container" id="js-jump-container" style="display:none;">
-      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-        <i class="icon-font icon-back"></i>
-      </a>
-      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-        <i class="icon-font icon-plane jump-plane"></i>
-      </div>
-    </div>
-    
-    
-  </div>
-</aside>
-
-
-
-
-
-
-<article id="post-深入理解变量声明提升和函数声明提升" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class=" article-header">
-  
-
-<h1 itemprop="name">
-  <a class="article-title" href="/blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87/">深入理解变量声明提升和函数声明提升</a>
-</h1>
-
-
-
-  
-  <a href="/blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87/" class="archive-article-date">
-  <time datetime="2020-05-20T08:42:14.000Z" itemprop="datePublished"><i
-      class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="变量声明提升"><a href="#变量声明提升" class="headerlink" title="变量声明提升"></a>变量声明提升</h3><h4 id="1、变量定义"><a href="#1、变量定义" class="headerlink" title="1、变量定义"></a>1、变量定义</h4><p>可以使用var定义变量，变量如果没有赋值，那变量的初始值为<code>undefined</code>。</p>
-<h4 id="2、变量作用域"><a href="#2、变量作用域" class="headerlink" title="2、变量作用域"></a>2、变量作用域</h4><p>变量作用域指变量起作用的范围。变量分为全局变量和局部变量。全局变量在全局都拥有定义；而局部变量只能在函数内有效。<br>在函数体内，同名的局部变量或者参数的优先级会高于全局变量。也就是说，如果函数内存在和全局变量同名的局部变量或者参数，那么全局变量将会被局部变量覆盖。<br><strong>所有不使用var定义的变量都视为全局变量</strong></p>
-    
-    <a class="article-more-a" href="/blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87/#more">more >></a>
-    
-    
-
-    
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-<div class="article-tag tagcloud">
-  <i class="icon-price-tags icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color3">前端</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color3">js</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color5">变量提升</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="javascript:void(0)"
-        class="js-tag article-tag-list-link color2">函数声明提升</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-<div class="article-category tagcloud">
-  <i class="icon-book icon"></i>
-  <ul class="article-tag-list">
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端//"
-        class="article-tag-list-link color3">前端</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端/js//"
-        class="article-tag-list-link color3">js</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端/js/变量提升//"
-        class="article-tag-list-link color5">变量提升</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-      <a href="/blog/categories/前端/js/变量提升/函数声明提升//"
-        class="article-tag-list-link color2">函数声明提升</a>
-    </li>
-    
-  </ul>
-</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-  <div class="mod-side-operation">
-    
-    <div class="jump-container" id="js-jump-container" style="display:none;">
-      <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-        <i class="icon-font icon-back"></i>
-      </a>
-      <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-        <i class="icon-font icon-plane jump-plane"></i>
-      </div>
-    </div>
-    
-    
-  </div>
-</aside>
-
-
-
-
-
-
 
 <nav id="page-nav">
-  <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/">Next »</a>
+  <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/2/">Next »</a>
 </nav>
 
 
@@ -1432,6 +1394,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color3">js</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+            </li>
+            
+            <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">JS</a>
             </li>
             
@@ -1448,11 +1418,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">js</a>
+              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              <a href="javascript:void(0)" class="js-tag color2">rollup</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1464,7 +1438,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+              <a href="javascript:void(0)" class="js-tag color3">闭包</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1484,11 +1458,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">闭包</a>
+              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1504,11 +1478,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color4">DNS</a>
+              <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color3">缓存</a>
+              <a href="javascript:void(0)" class="js-tag color5">js底层</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1520,15 +1494,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">垃圾回收</a>
+              <a href="javascript:void(0)" class="js-tag color4">小程序</a>
             </li>
             
             <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">js底层</a>
+              <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color5">变量提升</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
             </li>
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color1">typescript</a>
+            </li>
+            
+            <li class="article-tag-list-item">
+              <a href="javascript:void(0)" class="js-tag color1">axios</a>
             </li>
             
             <li class="article-tag-list-item">
@@ -1545,18 +1531,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             
             <li class="article-tag-list-item">
               <a href="javascript:void(0)" class="js-tag color3">Repaint</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color1">axios</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color5">变量提升</a>
-            </li>
-            
-            <li class="article-tag-list-item">
-              <a href="javascript:void(0)" class="js-tag color2">函数声明提升</a>
             </li>
             
             <li class="article-tag-list-item">
