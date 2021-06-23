@@ -21,7 +21,7 @@ var homeFnjs = {
             {
               icon: 'juejin',
               name: '掘金',
-              info: 'https://juejin.im/3650034335225112'
+              info: 'https://juejin.im/user/3650034335225112'
             },
             {
               icon: 'git',
