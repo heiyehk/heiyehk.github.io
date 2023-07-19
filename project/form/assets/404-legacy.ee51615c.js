@@ -1,0 +1,1 @@
+System.register(["./vendor-legacy.7497decb.js"],(function(e){"use strict";var t;return{setters:[function(e){t=e.d}],execute:function(){e("default",t({setup:()=>({})})).render=function(e,t,n,r,u,c){return"404"}}}}));

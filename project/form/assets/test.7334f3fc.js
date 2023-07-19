@@ -1,0 +1,1 @@
+import{d as a,r as o,o as s,c as t,w as r,j as e}from"./vendor.20deaaa7.js";const n=e("213");var c=a({setup(a){const e=()=>{console.log(1)};return(a,c)=>{const u=o("a-button");return s(),t(u,{onClick:e},{default:r((()=>[n])),_:1})}}});export default c;

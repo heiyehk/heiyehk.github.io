@@ -1,0 +1,1 @@
+System.register(["./vendor-legacy.7497decb.js"],(function(e){"use strict";var t,r;return{setters:[function(e){t=e.b,r=e.B}],execute:function(){const s=e("f",t([])),a=localStorage.getItem("forms");a&&(s.value=s.value=JSON.parse(a)),r((()=>s.value),(e=>{localStorage.setItem("forms",JSON.stringify(e))}),{deep:!0}),e("g",(e=>s.value.filter((t=>t._id===e))[0]))}}}));

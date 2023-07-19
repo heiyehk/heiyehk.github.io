@@ -7,7 +7,6 @@
   <meta name="Description" Content="黑叶heiyehk博客，一个爱于分享和转载技术、资讯的博客。是记录博主学习和成长的一个自媒体博客、个人博客。">
   <title>heiyehk | 黑叶 | Github博客</title>
   <link rel="stylesheet" href="./public/css/pc_reset.min.css">
-  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
   <link rel="stylesheet" href="./public/css/common.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1791366_lz43fexkf19.css">
   <link rel="stylesheet" href="./public/css/index/index_common.min.css" type="text/css">
@@ -38,58 +37,26 @@
         <img src="./public/img/logo.jpg" alt="HEIYEHK logo">
       </div>
       <h1 class="name">HEIYEHK | 黑叶</h1>
-      <p class="description">不忘初心，方得始终</p>
       <div class="router-link">
         <div class="link">
-          <a href="/blog/">博客</a>
+          <a title="博客" href="/blog/">博客</a>
         </div>
         <div class="link">
-          <a href="/generatejson">Generate Json</a>
+          <a title="在线模拟JSON" href="/project/generatejson/">在线模拟JSON</a>
+        </div>
+        <div class="link">
+          <a title="表单拖拽（未完善）" href="/project/form/">表单拖拽（未完善）</a>
         </div>
       </div>
       <div class="contact-list flex-center">
-        <div class="icons" v-for="(item, index) in myinfo.contact">
-          <a class="iconfont" :title="item.name" :key="index" :class="item.icon" :href="item.info" target="_blank" rel="noopener noreferrer"></a>
+        <div class="icons">
+          <a class="iconfont email" title="Email" href="mailto:heiyehk@foxmail.com" target="_blank" rel="noopener noreferrer"></a>
         </div>
-      </div>
-      <div class="hitokoto">
-        <div class="hitokoto-top flex-between">
-          <span class="hitokoto-from" v-text="'来自:' + (hitokoto && hitokoto.from ? hitokoto.from : '')"></span>
-          <span class="hitokoto-id" v-text="'id:' + (hitokoto && hitokoto.id ? hitokoto.id : '')"></span>
+        <div class="icons">
+          <a class="iconfont git" title="Github" href="https://github.com/heiyehk" target="_blank" rel="noopener noreferrer"></a>
         </div>
-        <p class="hitokoto-text" :class="hitokoto && hitokoto.hitokoto.length < 20 ? 'text-center' : ''" v-text="hitokoto && hitokoto.hitokoto ? hitokoto.hitokoto : ''"></p>
-      </div>
-      <div class="firend-links">
-        <span class="title">友情链接：</span>
-        <a href="https://www.sumicode.com/" target="_blank" rel="noopener noreferrer">粟米社区</a>
       </div>
     </div>
   </div>
-  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
-  <script src="./public/js/homeFnjs.js"></script>
-  <script>
-    window.onload = function() {
-      var less = {
-        env: "production"
-      };
-      homeFnjs.read();
-      window.app = homeFnjs.app;
-    }
-  </script>
-  <script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-    
 </body>
 </html>
