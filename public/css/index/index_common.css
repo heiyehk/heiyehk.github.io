@@ -222,3 +222,17 @@ body,
 .firend-links span {
   font-size: 14px;
 }
+
+html body #app {
+  overflow: auto;
+  min-height: 100vh;
+}
+
+.beian {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.beian a {
+  color: #333;
+}
